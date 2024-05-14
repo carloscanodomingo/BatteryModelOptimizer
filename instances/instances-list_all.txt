@@ -1,0 +1,28 @@
+## This is an example of specifying a list of instances.
+
+# Each line is an instance relative to trainInstancesDir/testInstancesdir
+# unless set to "" (see scenario.txt.tmpl) and an optional sequence of
+# instance-specific parameters that will be passed to target-runner when
+# invoked on that instance.
+
+# Empty lines and comments are ignored.
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=1 --n_experiments=10 --dataset_id=EV 
+--battery_id=W10 --n_cycles_per_experiments=10 --n_cycle=1 --n_experiments=10 --dataset_id=EV 
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=1 --n_experiments=10 --dataset_id=EV 
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=1 --n_experiments=10 --dataset_id=EV 
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=2 --n_experiments=10 --dataset_id=EV 
+--battery_id=W10 --n_cycles_per_experiments=10 --n_cycle=2 --n_experiments=10 --dataset_id=EV 
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=2 --n_experiments=10 --dataset_id=EV 
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=2 --n_experiments=10 --dataset_id=EV 
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=3 --n_experiments=10 --dataset_id=EV 
+--battery_id=W10 --n_cycles_per_experiments=10 --n_cycle=3 --n_experiments=10 --dataset_id=EV 
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=3 --n_experiments=10 --dataset_id=EV 
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=3 --n_experiments=10 --dataset_id=EV 
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=4 --n_experiments=10 --dataset_id=EV 
+--battery_id=W10 --n_cycles_per_experiments=10 --n_cycle=4 --n_experiments=10 --dataset_id=EV 
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=4 --n_experiments=10 --dataset_id=EV 
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=4 --n_experiments=10 --dataset_id=EV 
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=5 --n_experiments=10 --dataset_id=EV 
+--battery_id=W10 --n_cycles_per_experiments=10 --n_cycle=5 --n_experiments=10 --dataset_id=EV 
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=5 --n_experiments=10 --dataset_id=EV 
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=5 --n_experiments=10 --dataset_id=EV 

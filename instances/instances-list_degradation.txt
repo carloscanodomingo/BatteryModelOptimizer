@@ -1,0 +1,50 @@
+
+## This is an example of specifying a list of instances.
+# Each line is an instance relative to trainInstancesDir/testInstancesdir
+# unless set to "" (see scenario.txt.tmpl) and an optional sequence of
+# instance-specific parameters that will be passed to target-runner when
+# invoked on that instance.
+
+# Empty lines and comments are ignored.
+
+
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=10 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=10 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=10 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=20 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=20 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=20 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=30 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=30 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=30 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=40 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=40 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=40 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=50 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=50 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=50 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=60 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=60 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=60 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=70 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=70 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=70 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=80 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=80 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=80 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=90 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=90 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=90 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=100 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=100 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=100 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=110 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=110 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=110 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=120 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=120 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=120 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W04 --n_cycles_per_experiments=10 --n_cycle=130 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W08 --n_cycles_per_experiments=10 --n_cycle=130 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+--battery_id=W09 --n_cycles_per_experiments=10 --n_cycle=130 --n_experiments=10 --dataset_id=EV --base_param_path param.json
+

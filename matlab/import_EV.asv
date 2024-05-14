@@ -1,0 +1,64 @@
+%{
+if exist("EV_data_W10","var") == 0
+    data = {};
+    P = "/home/ccanodom/data/EV_battery/W10";
+    S = dir(fullfile(P,'W10*.mat'));
+    
+    for k = 1:numel(S)
+        F = fullfile(P,S(k).name);
+        file = load(F);
+        current_table = table(file.V_full_vec_M1_NMC25degC, file.ch_cap_full_vec_M1_NMC25degC, file.I_full_vec_M1_NMC25degC, file.Step_Index_full_vec_M1_NMC25degC, file.t_full_vec_M1_NMC25degC, file.dis_cap_full_vec_M1_NMC25degC);
+        
+    end
+end 
+%}
+if exist("EV_data_W10","var") == 0
+    last_count = 0;
+    EV_data_W10 = table();
+    data = {};
+    P = "/home/ccanodom/data/EV_battery/W10";
+    S = dir(fullfile(P,'W10*.mat'));
+    
+    for k = 1:numel(S)
+        F = fullfile(P,S(k).name);
+        file = load(F);
+        clearvars "current_table"
+        current_table = table(file.t_full_vec_M1_NMC25degC, file.V_full_vec_M1_NMC25degC, ...
+        file.I_full_vec_M1_NMC25degC, file.ch_cap_full_vec_M1_NMC25degC, ...
+        file.dis_cap_full_vec_M1_NMC25degC,  file.Step_Index_full_vec_M1_NMC25degC);
+    
+    
+    
+    current_table.Properties.VariableNames = ["t", "V","C","D_cap","C_cap", "Step"];
+    current_table = downsample(current_table, 20);
+
+    numRows = height(current_table);
+    cycleNum = zeros(numRows, 1);
+    currentCycle = 1;
+    last_step = Fasl
+    % Assuming 'step' is the name of your column with step numbers
+    for i = 2:numRows
+        if current_table.Step(i) == 14 % Detects a reset or cycle completion
+            last_step = true;
+        elseif last_step == true
+            last_step = false;
+            currentCycle = currentCycle + 1;
+        end
+        cycleNum(i) = currentCycle;
+    end
+    
+    % Add the cycle number as a new column
+    current_table.cycleNumber = cycleNum;
+    last_count = currentCycle + last_count;
+    display("Total: " + last_count + " cycle number: " + currentCycle + " iteration: " + k);
+    
+    EV_data_W10 = [EV_data_W10; current_table];
+    end
+end 
+
+
+
+
+% Save the updated table if needed
+save('updated_here.mat', 'EV_data_W10');
+

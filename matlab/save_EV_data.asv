@@ -1,0 +1,30 @@
+%% 
+
+batteryIDs = ["W03", "W04", "W05", "W07", "W08", "W09", "W10"];
+batteryIDs = ['W04',  "W08", "W09", "W10"];
+batteryNum = [3,  5, 6, 7];
+W04 = [0,25,75,123,132,159,176,179];
+W08 = [0,25,75,125,148,150,151,157,185,222,247,272,297,322,347];
+W09 = [0,25,75,122,144,145,146,150,179,216,241,266,291,316,341];
+W10 = [0,25,75,122,146,148,151,159,188,225,250,275,300,325,350];
+hdf5FilePath = "battery.h5";
+capacity_test = load("capacity_test.mat");
+downsample_rate = 20;
+
+figure(1)
+for i=1:length(batteryIDs)
+    subplot(2,2,i)
+    current_battery = batteryNum(i);
+    for capacity_test_index = 1:length(all_batteries{i})
+        CapacityTestCycle.Cap = capacity_test.cap{capacity_test_index, current_battery};
+        CapacityTestCycle.V = capacity_test.vcell{capacity_test_index, current_battery};
+        CapacityTestCycle.C = capacity_test.curr{capacity_test_index, current_battery};
+        CapacityTestCycle.T = capacity_test.curr{capacity_test_index, current_battery};
+
+    end
+    % Convert table to a structure for HDF5 storage
+     cycleStruct = table2struct(cycleData, 'ToScalar', true);
+    display("Starting battery ID: " + batteryIDs(i))
+    %save_battery_to_hdf5(batteryIDs(i), hdf5FilePath, downsample_rate)
+end
+

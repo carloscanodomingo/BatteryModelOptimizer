@@ -1,0 +1,9 @@
+
+batteryIDs = ["G01", "V04", ];
+hdf5FilePath = "battery.hd";
+downsample_rate = 20;
+cycles_index= [1,2,3,4];
+for i=1:length(batteryIDs)
+    display("Starting battery ID: " + batteryIDs(i))
+    save_battery_to_hdf5(batteryIDs(i), hdf5FilePath, downsample_rate, cycles_index)
+end
